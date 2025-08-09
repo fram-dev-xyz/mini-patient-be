@@ -9,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/patients")
 public class PatientController {
@@ -32,7 +33,7 @@ public class PatientController {
         return patientService.updatePatient(patientDto);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void deletePatient(@PathVariable Long id){
         patientService.deletePatient(id);
