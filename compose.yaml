@@ -12,7 +12,7 @@ services:
       POSTGRES_PASSWORD: password
       POSTGRES_DB: patient
     volumes:
-      - postgres_data:~/Docker/data/postgres
+      - postgres_data:./data/postgres
 
 volumes:
   postgres_data:
