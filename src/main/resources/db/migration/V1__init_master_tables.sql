@@ -5,7 +5,7 @@ CREATE TABLE state (
 );
 
 CREATE TABLE suburb (
-	id INT auto_increment NOT NULL,
+	id INT GENERATED ALWAYS AS IDENTITY NOT NULL,
 	state_id INT NOT NULL,
 	name varchar(50) NOT NULL,
 	CONSTRAINT suburb_pk PRIMARY KEY (id),

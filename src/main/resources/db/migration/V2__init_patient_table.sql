@@ -1,5 +1,5 @@
 CREATE TABLE patient (
-	id BIGINT auto_increment NOT NULL,
+	id BIGINT GENERATED ALWAYS AS IDENTITY NOT NULL,
 	pid varchar(50) NOT NULL,
 	first_name varchar(100) NOT NULL,
 	last_name varchar(100) NULL,
