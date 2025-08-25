@@ -1,0 +1,18 @@
+
+
+services:
+  be:
+    build: .
+    ports:
+      - '8080:8080'
+  db:
+    image: postgres:17.6-trixie
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: patient
+    volumes:
+      - postgres_data:~/Docker/data/postgres
+
+volumes:
+  postgres_data:
